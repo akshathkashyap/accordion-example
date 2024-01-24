@@ -1,0 +1,128 @@
+:root {
+    --bg-dark-op: #33333388;
+    --font-md: 1rem;
+    --font-lg: 2.5rem;
+    --primary: #333333;
+    --secondary: #aaaaaa;
+    --success: #38b000;
+    --action: #007aff;
+    --warn: #ff3500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dp-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dp-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dp-grid {
+    display: grid;
+}
+
+.dp-grid.c3 {
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+.borderize {
+    border: solid var(--primary) 1px;
+    border-radius: 8px;
+}
+
+div.dialog-bg {
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    padding: 10%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-dark-op);
+    z-index: 10;
+}
+
+div.dialog-bg > span.dialog-box {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 45%;
+    background-color: white;
+    border: solid var(--primary) 1px;
+    border-radius: 8px;
+}
+
+.success {
+    color: var(--success);
+}
+
+.action {
+    color: var(--action);
+}
+
+.warn {
+    color: var(--warn);
+}
+
+.warn-bg {
+    color: white;
+    background-color: var(--warn);
+    border: solid var(--warn) 1px;
+}
+
+.secondary {
+    color: var(--secondary);
+}
+
+.shiver:hover {
+    animation: shiver 0.1s linear 0s 2 ;
+}
+
+button {
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: var(--font-md);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: solid var(--primary) 1px;
+    background-color: white;
+}
+
+@keyframes shiver {
+    0% {
+        transform: translateX(-1px);
+    }
+    33% {
+        transform: translateX(0px);
+    }
+    66% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    div.dialog-bg {
+        align-items: center;
+        padding: 0 0 25% 0;
+    }
+    
+    div.dialog-bg > span.dialog-box {
+        width: 100%;
+    }
+}

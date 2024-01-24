@@ -1,0 +1,14 @@
+#searchbar {
+    font-size: var(--font-md);
+    font-family: 'Poppins', sans-serif;
+    height: 2rem;
+    width: calc(32rem - 5px);
+    margin: 1rem 1rem 0 1rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+    #searchbar {
+        width: calc(100% - 2rem - 5px);
+    }
+}

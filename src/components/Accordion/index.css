@@ -1,0 +1,163 @@
+section.accordion {
+    box-sizing: border-box;
+    position: relative;
+    width: 32rem;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    border: solid var(--primary) 1px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+section.accordion * {
+    margin: 0;
+}
+
+section.accordion > section.acdn-info {
+    overflow: hidden;
+}
+
+section.accordion.collapsed > section.acdn-info {
+    height: 0rem;
+}
+
+section.accordion > section.acdn-info > section.acdn-row {
+    margin-top: 1rem;
+}
+
+section.accordion > section.acdn-info > section.acdn-row > span.acdn-col {
+    box-sizing: border-box;
+    position: relative;
+}
+
+section.accordion > section.acdn-info > section.acdn-row.r2 > span.acdn-col {
+    padding-right: 1rem;
+}
+
+section.accordion > section.acdn-info > section.acdn-row.r2 > span.acdn-col:last-of-type {
+    padding-right: 6px;
+}
+
+section.accordion > section.acdn-info > section.acdn-row > span.acdn-col > input,
+section.accordion > section.acdn-info > section.acdn-row > span.acdn-col > select {
+    position: relative;
+    width: 100%;
+    font-size: var(--font-md);
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+
+section.accordion > section.acdn-info > section.acdn-row > span.acdn-col > select {
+    padding: 1px 0;
+}
+
+section.accordion > section.acdn-info > section.acdn-row > span.acdn-col > textarea {
+    resize: none;
+    height: auto;
+    width: 100%;
+    font-size: var(--font-md);
+    font-family: 'Poppins', sans-serif;
+}
+
+section.accordion > section.acdn-row > span.acdn-col > span.acdn-toggle.expand {
+    transform: rotateZ(135deg);
+}
+
+section.accordion > section.acdn-row > span.acdn-col > span.acdn-toggle.collapse {
+    transform: rotateZ(-405deg);
+}
+
+section.accordion > section.acdn-row > span.acdn-col > img {
+    margin-right: 1rem;
+    border: solid var(--secondary) 1px;
+    border-radius: 100%;
+}
+
+section.accordion > section.acdn-row > span.acdn-col > h1 {
+    font-size: 1.5rem;
+    width: 16rem;
+}
+
+section.accordion section.acdn-row {
+    position: relative;
+}
+
+section.accordion section.acdn-row > span.acdn-col {
+    height: 100%;
+    width: 100%;
+}
+
+section.accordion section.acdn-row > span.acdn-col > p:first-of-type {
+    color: var(--secondary);
+}
+
+section.accordion section.acdn-row > span.acdn-col > span.acdn-toggle {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+    border-top: solid var(--secondary) 2px;
+    border-right: solid var(--secondary) 2px;
+    transition: 0.5s ease-out;
+}
+
+span.material-symbols-outlined {
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+span.material-symbols-outlined.disabled {
+    cursor: not-allowed;
+}
+
+.pad {
+    padding: 2.2px 0;
+}
+
+.empty-warn {
+    border: solid var(--warn) 1px;
+}
+
+.newlines{
+    white-space: pre-line;
+    display:inline-block
+}
+
+#deleteCelebDialog {
+    display: flex;
+    flex-direction: column;
+}
+
+#deleteCelebDialog > span {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#deleteCelebDialog > span:first-of-type {
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+#deleteCelebDialog > span > span {
+    margin: 0;
+}
+
+#deleteCelebDialog > span > button {
+    margin-left: 1rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+    section.accordion {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    section.accordion > section.acdn-row > span.acdn-col > h1 {
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+}
